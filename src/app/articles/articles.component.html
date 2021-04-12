@@ -1,0 +1,20 @@
+<div class="contentor">
+    <div class="user-welcome animate__animated animate__fadeInLeft" *ngIf="userWelcome" id="welcome-message">
+        <p> Welcome {{userWelcome}}! </p>
+        <p> Here are all the users' posts! Enjoy! </p>
+    </div>
+    <div class="animate__animated animate__fadeInLeft" *ngFor="let user of users">
+        <div *ngIf="user.posts.length>=1">
+            <div>
+                <div id="user-article"> Author: {{user.name}}</div>
+
+                <div *ngFor="let post of user.posts" class="article-container">
+
+                    <div class="article-item"> Title: {{post.titulo}}</div>
+
+                    <div class="article-item"> {{post.artigo}}</div>
+
+                </div>
+            </div>
+        </div>
+    </div>

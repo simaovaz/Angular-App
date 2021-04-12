@@ -1,0 +1,467 @@
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+$primary: black;
+$gold: gold;
+
+/* CSS da navbar */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2luZW1hfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80");
+    background-position-x: cover;
+    overflow-y: scroll;
+}
+
+.coent {
+    display: flex;
+}
+
+.primeira {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contentor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    position: relative;
+    border-top: none;
+}
+.escondido {
+    display: none;
+    z-index: 2;
+}
+
+.escondido.active {
+    display: flex;
+}
+.item {
+    margin: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.menu-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: gold;
+    width: 90%;
+    margin: auto auto;
+    padding-top: 0.2rem;
+}
+div.menu-navbar {
+    border-bottom: 1px solid $gold;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 3;
+}
+ul.sub-links {
+    border: 1px solid gold;
+}
+.brand-title a {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: gold;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+.brand-title a:hover {
+    background-color: transparent;
+    text-decoration: none;
+    border-color: gold;
+}
+.menu-navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-navbar-links li {
+    list-style: none;
+    position: relative;
+}
+
+li .sub-links {
+    position: absolute;
+    background-color: black;
+    z-index: 4;
+}
+.menu-navbar-links a {
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: gold;
+    background-color: transparent;
+    padding: 0.5rem;
+    display: block;
+}
+
+.menu-navbar-links li:hover a.main {
+    background-color: transparent;
+    text-decoration: none;
+    border-color: gold;
+    border-radius: 10px;
+    color: gold;
+}
+.sub-links li:hover a {
+    background-color: transparent;
+    text-decoration: none;
+    border-color: gold;
+    border-radius: 10px;
+    color: gold;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: gold;
+    border-radius: 10px;
+}
+
+/* CSS para os Movies of the Week*/
+.pop-up p {
+    float: right;
+    background-color: transparent;
+    color: gold;
+    width: 500px;
+    height: 90px;
+    border-radius: 5px;
+    border: 1px solid gold;
+    padding: 1em;
+    padding-right: 0.5em;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.comments {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    border: 1px solid gold;
+    font-size: 20px;
+}
+
+input {
+    height: 30px;
+    font-size: 20px;
+}
+.primeira h1 {
+    color: white;
+}
+
+.style {
+    padding-right: 20px;
+    padding-top: 20px;
+    font-size: 17px;
+    color: white;
+    text-justify: justify;
+}
+
+input,
+textarea {
+    border-radius: 5px;
+    border: 1px solid black;
+    :hover {
+        color: grey;
+    }
+}
+textarea {
+    font-size: 20px;
+}
+
+.comment-div {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.img {
+    margin-top: 10px;
+}
+
+div.welcome.animate__animated.animate__fadeInLeft {
+    font-size: 40px;
+    font-family: fantasy;
+    color: gold;
+    padding-top: 150px;
+    width: 600px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.welcome.animate__animated.animate__fadeInLeft p {
+    text-align: center;
+}
+
+.style p {
+    line-height: 200%;
+    text-justify: justify;
+}
+
+.user-welcome p {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+#login {
+    background-color: gold;
+    color: black;
+    font-size: 30px;
+}
+
+#login:hover {
+    background-color: white;
+}
+
+button#submit {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+a.item.main.pad {
+    padding-top: 14px;
+}
+
+div.content.animate__animated.animate__fadeInLeft {
+    display: flex;
+}
+
+button.btn.btn-dark {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+div#logInBtn {
+    padding-top: 15px;
+}
+
+.greeting label {
+    color: white;
+    padding-top: 5px;
+}
+
+div#registered {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.login2 {
+    color: white;
+    font-size: 30px;
+}
+
+.vote.active {
+    display: inline;
+    color: white;
+}
+
+.vote {
+    display: none;
+}
+
+// media queries - ordem ascendente
+
+@media (max-width: 330px) {
+    .pop-up {
+        display: none;
+    }
+}
+
+@media (max-width: 410px) {
+    .comment-div textarea {
+        width: 250px !important;
+        height: 150px !important;
+    }
+    button#login {
+        font-size: 15px;
+    }
+    .user-welcome p {
+        font-size: 15px;
+    }
+
+    img.img {
+        max-width: 200px;
+    }
+    .content {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 430px) {
+    div#registerError {
+        font-size: 15px !important;
+        bottom: 7px !important;
+        left: 100px !important;
+    }
+    div.container-articles .item {
+        font-size: 15px;
+    }
+    .error {
+        font-size: 15px !important;
+        bottom: -20px !important;
+    }
+    div#logInBtn {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    div.login2 {
+        text-align: center;
+        width: 275px !important;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .container-articles div {
+        font-size: 15px;
+        padding: 5px !important;
+    }
+    .articles h1,
+    .no-posts {
+        font-size: 25px !important;
+        padding-top: 10px;
+    }
+    button.btn.btn-dark {
+        font-size: 15px !important;
+    }
+    div.login {
+        width: 275px !important;
+        height: 220px !important;
+    }
+    .login-welcome .login-already div p {
+        font-size: 15px !important;
+    }
+    .login-box {
+        height: 50vh !important;
+    }
+    input#name,
+    input#pass {
+        height: 22px;
+        font-size: 17px;
+    }
+    .inner label {
+        margin-bottom: 0;
+    }
+    div.submit-button {
+        padding-top: 2px !important;
+        padding-bottom: 0 !important;
+    }
+    .inner div#registered {
+        padding-bottom: 0px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .pop-up {
+        float: left;
+    }
+    div.text {
+        .style {
+            font-size: 12px;
+            padding-right: 0;
+            line-height: 150%;
+        }
+    }
+    .contentor {
+        width: 90%;
+    }
+    div.pop-up p {
+        width: 280px;
+        height: 100%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 760px) {
+    .comment-div textarea {
+        width: 350px;
+        height: 200px;
+    }
+    div.welcome.animate__animated.animate__fadeInLeft p {
+        font-size: 20px;
+    }
+
+    .toggle-button {
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .menu-navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .menu-navbar {
+        flex-direction: column;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .menu-navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu-navbar-links li {
+        text-align: center;
+    }
+    .menu-navbar-links ul li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .menu-navbar-links.active {
+        display: flex;
+    }
+    .comments p {
+        font-size: 15px;
+    }
+    .comments {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    div.welcome.animate__animated.animate__fadeInLeft {
+        padding: 20px !important;
+    }
+    div.animate__animated.animate__fadeInLeft:nth-child(2) {
+        padding-top: 10px !important;
+    }
+    .content {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-container {
+        justify-content: center;
+    }
+}

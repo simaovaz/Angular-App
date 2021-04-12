@@ -1,0 +1,38 @@
+
+.container{
+    display: none;
+}
+.container.active{
+    display: flex;
+}
+.opening-countdown{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    height: 100vh;
+    color:white;
+    font-size: 50px;
+}
+div.animate__animated.animate__fadeInLeft:nth-child(2){
+    width: 300px;
+    padding-top: 50px;
+}
+
+
+.escondeImagem{
+    display: none;
+}
+.escondeImagem.active{
+    display:inline;
+    width:50px;
+}
+
+.main-container{
+    display: none;
+}
+.main-container.active{
+    display: flex;
+    justify-content: center;
+}

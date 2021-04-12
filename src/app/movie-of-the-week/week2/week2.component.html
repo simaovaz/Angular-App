@@ -1,0 +1,42 @@
+<div class="contentor">
+    <div class="user-welcome animate__animated animate__fadeInLeft" *ngIf="userWelcome">
+        <p> Welcome {{userWelcome}}! </p>
+    </div>
+    <div *ngIf="funFact" class="pop-up animate__animated animate__lightSpeedInRight">
+        <p> Did you know that in 2007, the American Film Institute ranked Schindler's
+            List 8th on its list of the 100 best American films of all time? Amazing!
+        </p>
+    </div>
+
+    <div class="primeira animate__animated animate__fadeInLeft">
+        <div>
+            <h1>{{title}}</h1>
+        </div>
+        <div>
+            <h1> Stars: {{contador}} <button (click)="contaLikes()" class="btn btn-dark"> <i class="fa fa-star-o"></i>
+                </button> </h1>
+        </div>
+    </div>
+
+    <div class="content animate__animated animate__fadeInLeft">
+        <div class="text">
+            <div class="style">Director : Steven Spielberg </div>
+            <div class="style"> Description : {{description}} </div>
+        </div>
+        <div>
+            <img class="img" src="http://image.tmdb.org/t/p/w300/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg">
+        </div>
+    </div>
+    <div class="comment-div">
+        <div><label for="name" class="style"> Name</label></div>
+        <div> <input type="text" [(ngModel)]="name" required> </div>
+        <div class="style"> <textarea [(ngModel)]="comment" rows="7" cols="70" required
+                placeholder="Write your comment"> </textarea> </div>
+        <button type="button" (click)="postComment()" id="submit" class="btn btn-dark">Submit</button>
+
+        <div *ngFor="let item of comments" class="comments">
+            <p> Name: {{item.firstName}}</p> <br>
+            <p> {{item.comment}}</p>
+        </div>
+    </div>
+</div>

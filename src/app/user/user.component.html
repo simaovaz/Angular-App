@@ -1,0 +1,77 @@
+<div class="login-box animate__animated animate__fadeInLeft" *ngIf="userWelcome===null">
+    <div class="login">
+        <div class="inner" #login>
+            <div>
+                <label> Name </label>
+                <input type="text" [(ngModel)]="name" id="name">
+            </div>
+            <div>
+                <label> Password </label>
+                <input type="password" [(ngModel)]="password" id="pass">
+            </div>
+            <div class="submit-button">
+                <button class="btn btn-dark" type="submit" (click)="newUser()"> Register </button>
+                <div *ngIf="error" id="registerError"> {{error}}</div>
+
+            </div>
+            <div class="inner">
+                <div id="registered">Already registered? </div>
+                <div><button class="btn btn-dark" (click)="change()"> Log in now</button> </div>
+            </div>
+        </div>
+        <div class="greeting" #toggle>
+            <div style="position: relative">
+                <div><label> Name </label></div>
+                <div> <input [(ngModel)]="loginName" id="name"> </div>
+
+                <div> <label>Password </label> </div>
+                <div><input type="password" [(ngModel)]="loginPassword" id="pass">
+                    <div *ngIf="loginError" class="error"> {{loginError}}</div>
+                </div>
+
+                <div id="logInBtn"> <button class="btn btn-dark" (click)="logIn()"> Log In</button></div>
+
+            </div>
+        </div>
+        <div class="greeting" #login2>
+            <div class="login2"> Welcome {{loginName}}!</div>
+
+            <div class="login2">Here is the <button class="btn btn-dark" routerLink="/">home page</button> </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div *ngIf="userWelcome" class="user-page animate__animated animate__fadeInLeft">
+    <div class="contentor">
+        <div class="login-name">
+            <div>
+                <h3 style="color: white;"> Welcome to your user page, {{loginName}}! </h3>
+            </div>
+
+            <div id="logOut"> <button class="btn btn-dark" (click)="logOut()" routerLink="/"> LOG OUT </button> </div>
+        </div>
+        <button class="btn btn-dark" (click)="novo()"> {{btn}}</button>
+
+        <div *ngIf="articles" class="articles" #hideArticles>
+            <h1 *ngIf="articles.length>0" class="no-posts">Posts </h1>
+
+            <div *ngIf="articles.length<1" class="no-posts"> No posts yet</div>
+            <div *ngFor="let article of articles" class="container-articles">
+                <div class="item"> Title: {{article.titulo}}</div>
+                <div class="item"> {{article.artigo}}</div>
+            </div>
+
+        </div>
+        <div *ngIf="!submited" class="textareaArticle" #textarea>
+            <div class="item"> Title: </div>
+            <div><input type="text" [(ngModel)]="title" [(ngModel)]="deleteInput"> </div>
+            <div class="item"> Article: </div>
+            <div><textarea [(ngModel)]="post" placeholder="Write here" rows="8"></textarea> </div>
+            <button class="btn btn-dark" (click)="newArticle()"> submeter</button>
+        </div>
+        <div *ngIf="submited" class="no-posts">
+            <p> Article Submited!</p>
+        </div>
+    </div>

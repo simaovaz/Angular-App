@@ -1,0 +1,23 @@
+<div class="contentor">
+    <div class="user-welcome animate__animated animate__fadeInLeft" *ngIf="userWelcome" id="welcome-message">
+        <p> Welcome {{userWelcome}}! </p>
+    </div>
+    <ul *ngIf="users">
+        <div *ngFor="let user of users; index as i" class="movies-container animate__animated animate__fadeInLeft">
+            <div class="item">
+                <h1> {{i+1}}.</h1>
+            </div>
+            <div class="movies">
+                <div>
+                    <div class="item">Movie title: {{user.title}} </div>
+                    <div class="item"> Movie rating: {{user.vote_average}} </div>
+                    <div class="item" id="movie-description"> Movie description: {{user.overview}} </div>
+                </div>
+                <div class="movie-poster">
+                    <img src="http://image.tmdb.org/t/p/w200{{user.poster_path}}">
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-dark" (click)="mudaTop()"> {{buttonTopMessage}}</button>
+    </ul>
+</div>

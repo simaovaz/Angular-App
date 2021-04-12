@@ -1,0 +1,21 @@
+button{
+    color:black;
+    background-color: gold;
+    box-shadow: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button:hover{
+    background-color: white;
+    color:black;
+}
+
+button:focus{
+    background-color: gold;
+}
+
+input{
+    height: 30px;
+    font-size: 20px;
+}

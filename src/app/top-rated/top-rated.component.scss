@@ -1,0 +1,62 @@
+
+.movies-container{
+    border: 1px solid gold;
+    background-color:black;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.movies{
+    color:white;
+    padding:1em;
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+}
+@media (max-width:800px){
+    .movies{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .movies .item{
+        font-size: 15px;
+    }
+}
+
+.item h1{
+    color:white;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.item{
+    display: block;
+    padding-bottom: 1em;
+    margin-bottom: 5px;
+}
+
+button{
+    background-color: gold;
+    color:black; 
+}
+
+button:focus{
+    background-color: gold;
+    color:black
+}
+
+button:hover{
+    background-color: white;
+}
+
+.movie-poster{
+    display: flex;
+    align-items: center;
+}
+
+#welcome-message{
+    padding-top: 15px;
+}
+
+#movie-description{
+    padding-right: 15px;
+}
