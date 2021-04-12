@@ -1,0 +1,19 @@
+GET http://localhost:3000/users
+
+### 
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "name" : "rute",
+    "password": "rute"
+}
+
+###
+
+GET http://localhost:3000/users/605b3c424cf6482bc4a53fc3
+
+### 
+
+DELETE http://localhost:3000/users/605df558c8e1eb36a035b655
